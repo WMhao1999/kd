@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<view class="show_view">
-			<index v-if="PageCur=='home'"></index>
+			<index :location="location" v-if="PageCur=='home'"></index>
 			<codeNum v-if="PageCur=='similar'"></codeNum>
 			<scanQR v-if="PageCur=='sub'"></scanQR>
 			<vip @changeShowUrl="PageCur='home'" v-if="PageCur=='cart'"></vip>
@@ -93,13 +93,23 @@
 						default: "../../static/image/tabbar/customer-bussinessman.svg",
 						active: "../../static/image/tabbar/customer-businessman-fill.svg"
 					}
-				}
+				},
+				location: "上海"
 			}
 		},
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
 			}
+		},
+		onShow() {
+			uni.getStorage({
+				key: "City_Name",
+				success(res) {
+					console.log(res.data);
+					this.location = res.data;
+				}
+			})
 		}
 	}
 </script>

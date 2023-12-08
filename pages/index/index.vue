@@ -1,9 +1,9 @@
 <template>
 	<view class="content">
 		<statusBar></statusBar>
-		<view class="search">
+		<view class="search" @click="jumpCityList">
 			<view class="city">
-				北京
+				{{location}}
 			</view>
 			<view class="search_main">
 				<view class="icon cuIcon-search"></view>
@@ -158,6 +158,12 @@
 	export default {
 		components: {
 			listItem
+		},
+		props: {
+			location: {
+				type: String,
+				default: ""
+			}
 		},
 		data() {
 			return {
@@ -634,6 +640,11 @@
 				if (type === "confirm") {
 					this.rightModalShow = false;
 				};
+			},
+			jumpCityList() {
+				uni.navigateTo({
+					url: "/pages/cityList/cityList"
+				})
 			}
 		},
 		computed: {
