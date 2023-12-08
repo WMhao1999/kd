@@ -1,0 +1,1 @@
+<view class="package data-v-02ebe396"><view class="detail data-v-02ebe396"><view class="tips data-v-02ebe396">{{''+tips+''}}</view><view class="title data-v-02ebe396">{{''+title+''}}</view><view class="info data-v-02ebe396">{{''+info+''}}</view></view><view class="image data-v-02ebe396"><image src="{{src}}" mode class="data-v-02ebe396"></image></view></view>

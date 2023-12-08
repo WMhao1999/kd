@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content.data-v-18458d92 {
+  background-color: #201e1d;
+}
+.content .banner_main.data-v-18458d92 {
+  width: 100%;
+  height: 340rpx;
+  padding: 26rpx 0;
+}
+.content .banner_main .tabbar.data-v-18458d92 {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 26rpx;
+  margin-bottom: 136rpx;
+}
+.content .banner_main .tabbar view.data-v-18458d92 {
+  display: inline-block;
+}
+.content .banner_main .tabbar .icon.data-v-18458d92 {
+  color: #d6c29a;
+  font-size: 20px;
+  margin-right: 36rpx;
+}
+.content .banner_main .tabbar .title.data-v-18458d92 {
+  font-weight: bold;
+  color: #d6c29a;
+  font-size: 16px;
+  position: relative;
+  top: -4rpx;
+  margin-right: 36rpx;
+}
+.content .banner_main .tabbar .subscribe.data-v-18458d92 {
+  width: 120rpx;
+  text-align: center;
+  font-size: 12px;
+  color: #d6c29a;
+  border: 1px solid #d6c29a;
+  border-radius: 60rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: relative;
+  top: -4rpx;
+}
+.content .banner_main .tabbar .more.data-v-18458d92 {
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50%;
+  color: #d6c29a;
+  border: 1px solid #d6c29a;
+  text-align: center;
+  font-size: 16px;
+}
+.content .banner_main .vipTips.data-v-18458d92 {
+  width: 90%;
+  margin: 0 auto;
+  height: 120rpx;
+  background-color: #ffdc9a;
+  border-radius: 12px 12px 0 0;
+  padding: 8rpx 8rpx 0 8rpx;
+}
+.content .banner_main .vipTips .vipTipsMain.data-v-18458d92 {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f7c66c;
+  border-radius: 12px 12px 0 0;
+  line-height: 110rpx;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6b4303;
+}
+.content .banner_main .vipTips .vipTipsMain .bigFont.data-v-18458d92 {
+  font-size: 20px;
+  display: inline-block;
+  margin: 0 8rpx;
+}
+.content .vip_content.data-v-18458d92 {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 12px 12px 0 0;
+  padding: 32rpx;
+}
+.content .vip_content .title.data-v-18458d92 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 32rpx;
+}
+.content .vip_content .package_big.data-v-18458d92 {
+  width: 100%;
+  height: 180rpx;
+  margin-bottom: 30rpx;
+}
+.content .vip_content .package_center_main.data-v-18458d92 {
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.content .vip_content .package_center_main .package_center_left.data-v-18458d92 {
+  width: 48%;
+  height: 180rpx;
+  float: left;
+}
+.content .vip_content .package_center_main .package_center_right.data-v-18458d92 {
+  width: 48%;
+  height: 180rpx;
+  float: right;
+}
+.content .vip_content .package_small_main.data-v-18458d92 {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 180rpx;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.content .vip_content .package_small_main .package_small.data-v-18458d92 {
+  display: inline-block;
+  width: 200rpx;
+  margin-right: 16rpx;
+}
+.content .vip_content .vip_price_option.data-v-18458d92 {
+  overflow: hidden;
+  margin-bottom: 32rpx;
+}
+.content .vip_content .vip_price_option .item_price.data-v-18458d92 {
+  width: 210rpx;
+  height: 240rpx;
+  float: left;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 28rpx 20rpx;
+  position: relative;
+  overflow: hidden;
+  margin-right: 16rpx;
+}
+.content .vip_content .vip_price_option .item_price .mouth.data-v-18458d92 {
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+.content .vip_content .vip_price_option .item_price .price.data-v-18458d92 {
+  font-weight: bold;
+  color: #000000;
+  font-size: 18px;
+}
+.content .vip_content .vip_price_option .item_price .price .small_title.data-v-18458d92 {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: 400;
+  margin-right: 8rpx;
+}
+.content .vip_content .vip_price_option .item_price .calc_price.data-v-18458d92 {
+  font-size: 6px;
+  color: #aa9abc;
+}
+.content .vip_content .vip_price_option .item_price .price_tips.data-v-18458d92 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40rpx;
+  text-align: center;
+  width: 100%;
+  line-height: 40rpx;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #ff5f0f;
+}
+.content .vip_content .vip_price_option .active.data-v-18458d92 {
+  background-color: #fff4db;
+  border-color: #f6be66;
+}
+.content .active_vip.data-v-18458d92 {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #211f1e;
+  border-radius: 80rpx;
+  overflow: hidden;
+}
+.content .active_vip .active_vip_price.data-v-18458d92 {
+  float: left;
+  color: #feefc8;
+  padding-left: 40rpx;
+  font-size: 20px;
+  font-weight: bold;
+}
+.content .active_vip .active_vip_price view.data-v-18458d92 {
+  display: inline-block;
+}
+.content .active_vip .active_vip_price .small_title.data-v-18458d92 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.content .active_vip .active_vip_btn.data-v-18458d92 {
+  float: right;
+  width: 180rpx;
+  height: 100%;
+  background-color: #ff5f0e;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
