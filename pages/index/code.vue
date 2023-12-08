@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<statusBar></statusBar>
 		<view class="cardTab">
 			<view :class="select_type=='charge' ? 'active charge item' : 'charge item'"
 				@click="tabSelectType('charge')">

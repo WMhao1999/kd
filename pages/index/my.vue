@@ -1,13 +1,12 @@
 <template>
 	<view class="content">
+		<statusBar></statusBar>
 		<view class="banner">
 
 		</view>
 		<view class="main">
 			<view class="head_plot" @click="iconListShow=true">
-				<image
-					src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fdf434177-70d9-4db6-9f82-7b4650ae415c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=fd01a5a13614015d39e3519e2d03380c"
-					mode=""></image>
+				<image :src="userIcon" mode=""></image>
 			</view>
 			<view class="service">
 				<image src="../../static/image/my/rengongkefu.svg" mode=""></image>
@@ -148,7 +147,7 @@
 		<view class="cu-modal bottom-modal" :class="iconListShow?'show':''">
 			<view class="cu-dialog">
 				<view class="cu-bar bg-white">
-					<view class="action text-green">确定</view>
+					<view class="action text-green" @tap="updateUserIcon">确定</view>
 					<view class="action text-blue" @tap="iconListShow=false">取消</view>
 				</view>
 				<view class="padding-xl">
@@ -171,6 +170,7 @@
 				discount: 6,
 				point: 0,
 				iconListShow: false,
+				userIcon: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fdf434177-70d9-4db6-9f82-7b4650ae415c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=fd01a5a13614015d39e3519e2d03380c",
 				select_id: -1,
 				plot_list: [{
 						path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5dbbd23d-3fe7-4c2e-8929-a234dfe2f31d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=cfcb0ce4297d2741e6926c4021f2c778",
@@ -215,7 +215,10 @@
 
 		},
 		methods: {
-
+			updateUserIcon() {
+				this.userIcon = this.plot_list[this.select_id].path;
+				this.iconListShow = false;
+			}
 		}
 	}
 </script>
@@ -223,7 +226,7 @@
 <style scoped lang="scss">
 	.content {
 		width: 100%;
-		background-color: #fdf8f3;
+		background-color: #f9efe6;
 
 		.banner {
 			width: 100%;
@@ -402,8 +405,8 @@
 			float: left;
 			background-color: #fff;
 			border-radius: 50%;
-				margin-right: 40rpx;
-				margin-bottom: 20rpx;
+			margin-right: 40rpx;
+			margin-bottom: 20rpx;
 
 			image {
 				width: 100%;
@@ -411,8 +414,8 @@
 				border-radius: 50%;
 			}
 		}
-		
-		.active{
+
+		.active {
 			border: 2px solid #ff5f0f;
 		}
 	}

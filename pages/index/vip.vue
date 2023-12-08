@@ -1,8 +1,9 @@
 <template>
 	<view class="content">
+		<statusBar></statusBar>
 		<view class="banner_main">
 			<view class="tabbar">
-				<view class="icon cuIcon-home"></view>
+				<view @click="returnHome" class="icon cuIcon-home"></view>
 				<view class="title">
 					VIP会员
 				</view>
@@ -112,7 +113,9 @@
 
 		},
 		methods: {
-
+			returnHome() {
+				this.$emit("changeShowUrl");
+			}
 		}
 	}
 </script>
@@ -292,7 +295,7 @@
 					}
 
 					.calc_price {
-						font-size: 6px;
+						font-size: 10px;
 						color: #aa9abc;
 					}
 

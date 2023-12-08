@@ -4,7 +4,7 @@
 			<index v-if="PageCur=='home'"></index>
 			<codeNum v-if="PageCur=='similar'"></codeNum>
 			<scanQR v-if="PageCur=='sub'"></scanQR>
-			<vip v-if="PageCur=='cart'"></vip>
+			<vip @changeShowUrl="PageCur='home'" v-if="PageCur=='cart'"></vip>
 			<my v-if="PageCur=='mine'"></my>
 		</view>
 
@@ -108,8 +108,8 @@
 	.activeColor {
 		color: #ff5f0f;
 	}
-	
-	.show_view{
+
+	.show_view {
 		height: calc(100% - 100rpx);
 	}
 </style>

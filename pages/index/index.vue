@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<statusBar></statusBar>
 		<view class="search">
 			<view class="city">
 				北京
@@ -152,7 +153,7 @@
 	import {
 		getIndexInArray
 	} from "@/common/utils.js";
-	import listItem from "@/component/list_item.vue"
+	import listItem from "@/component/list_item.vue";
 
 	export default {
 		components: {
@@ -544,9 +545,6 @@
 					}
 				]
 			}
-		},
-		onLoad() {
-
 		},
 		methods: {
 			cardSwiper(e) {

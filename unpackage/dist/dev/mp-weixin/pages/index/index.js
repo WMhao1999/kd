@@ -279,6 +279,7 @@ var _utils = __webpack_require__(/*! @/common/utils.js */ 52);
 //
 //
 //
+//
 var listItem = function listItem() {
   __webpack_require__.e(/*! require.ensure | component/list_item */ "component/list_item").then((function () {
     return resolve(__webpack_require__(/*! @/component/list_item.vue */ 81));
@@ -645,7 +646,6 @@ var _default = {
       }]
     };
   },
-  onLoad: function onLoad() {},
   methods: {
     cardSwiper: function cardSwiper(e) {
       this.cardCur = e.detail.current;

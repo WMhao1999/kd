@@ -81,6 +81,21 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  if (!_vm._isMounted) {
+    _vm.e0 = function ($event) {
+      _vm.iconListShow = true
+    }
+    _vm.e1 = function ($event) {
+      _vm.iconListShow = false
+    }
+    _vm.e2 = function ($event, index) {
+      var _temp = arguments[arguments.length - 1].currentTarget.dataset,
+        _temp2 = _temp.eventParams || _temp["event-params"],
+        index = _temp2.index
+      var _temp, _temp2
+      _vm.select_id = index
+    }
+  }
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -182,16 +197,154 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      money: 9999999999,
+      money: 99999,
       discount: 6,
-      point: 0
+      point: 0,
+      iconListShow: false,
+      userIcon: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fdf434177-70d9-4db6-9f82-7b4650ae415c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=fd01a5a13614015d39e3519e2d03380c",
+      select_id: -1,
+      plot_list: [{
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5dbbd23d-3fe7-4c2e-8929-a234dfe2f31d%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=cfcb0ce4297d2741e6926c4021f2c778",
+        id: 0
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F4062d2ee-9e4e-4817-b72a-418571d3dda6%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=33506aaa54e01c23154cf9e921297f18",
+        id: 1
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fc73fd06c-548a-4768-9643-7216ef9324b8%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=57cc33f66e22bdf0684e03a8f1fd82d1",
+        id: 2
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F512074d2-ea03-456a-a840-d1f142f34b11%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527290&t=08ce1b8ab9f856f36bf3c01d96da28f8",
+        id: 3
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201908%2F14%2F20190814002353_xuwxh.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527289&t=f620f23c7e8e69c1969811d6155b5875",
+        id: 4
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202005%2F21%2F20200521135528_Mvkiz.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527289&t=f94fdc00ec255c13b4e660a1f3dbcfe4",
+        id: 5
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202006%2F12%2F20200612202548_xixhm.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527289&t=b24d701ef126a76ec25c13a23c8d0c19",
+        id: 6
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202004%2F29%2F20200429220225_pgjkw.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527289&t=d4e57aca5f07ee4d3874271ea44c2890",
+        id: 7
+      }, {
+        path: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202003%2F15%2F20200315074345_ksvms.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1704527289&t=23f1abc6a224ae2026cd4e6d5c3330a4",
+        id: 8
+      }]
     };
   },
   onLoad: function onLoad() {},
-  methods: {}
+  methods: {
+    updateUserIcon: function updateUserIcon() {
+      this.userIcon = this.plot_list[this.select_id].path;
+      this.iconListShow = false;
+    }
+  }
 };
 exports.default = _default;
 

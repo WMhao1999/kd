@@ -6,6 +6,8 @@ import './uni.promisify.adaptor'
 
 import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom', cuCustom)
+import statusBar from './component/statusBar.vue'
+Vue.component('statusBar', statusBar);
 
 Vue.config.productionTip = false
 App.mpType = 'app'

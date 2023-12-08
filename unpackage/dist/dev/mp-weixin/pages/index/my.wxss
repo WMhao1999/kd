@@ -26,7 +26,7 @@
 /* 文章场景相关 */
 .content.data-v-810f65fc {
   width: 100%;
-  background-color: #fdf8f3;
+  background-color: #f9efe6;
 }
 .content .banner.data-v-810f65fc {
   width: 100%;
@@ -34,12 +34,11 @@
   background-color: #f9efe6;
 }
 .content .main.data-v-810f65fc {
-  min-height: 300rpx;
   background-color: #fdf8f3;
   position: relative;
   top: -30rpx;
   border-radius: 14px 14px 0 0;
-  padding: 80rpx 40rpx 0;
+  padding: 80rpx 40rpx 100rpx;
 }
 .content .main .head_plot.data-v-810f65fc {
   width: 120rpx;
@@ -52,6 +51,11 @@
   padding: 12rpx;
   overflow: hidden;
 }
+.content .main .head_plot image.data-v-810f65fc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
 .content .main .service.data-v-810f65fc {
   width: 60rpx;
   height: 60rpx;
@@ -60,6 +64,14 @@
   position: absolute;
   top: 10rpx;
   right: 140rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding-top: 6rpx;
+}
+.content .main .service image.data-v-810f65fc {
+  width: 80%;
+  height: 80%;
+  display: inline-block;
 }
 .content .main .setting.data-v-810f65fc {
   width: 60rpx;
@@ -69,6 +81,14 @@
   position: absolute;
   top: 10rpx;
   right: 40rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding-top: 6rpx;
+}
+.content .main .setting image.data-v-810f65fc {
+  width: 80%;
+  height: 80%;
+  display: inline-block;
 }
 .content .main .username.data-v-810f65fc {
   font-size: 18px;
@@ -126,7 +146,50 @@
   margin-bottom: 40rpx;
   padding: 0 30rpx;
 }
+.content .main .toolbar_info .toolbar_title.data-v-810f65fc {
+  padding-top: 26rpx;
+  font-size: 16px;
+  font-weight: bold;
+}
 .content .main .toolbar_info .lines.data-v-810f65fc {
   height: 160rpx;
+}
+.content .main .toolbar_info .lines .lines_item.data-v-810f65fc {
+  width: 25%;
+  padding-top: 22rpx;
+  float: left;
+}
+.content .main .toolbar_info .lines .lines_item .lines_item_icon.data-v-810f65fc {
+  text-align: center;
+}
+.content .main .toolbar_info .lines .lines_item .lines_item_icon image.data-v-810f65fc {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  display: inline-block;
+}
+.content .main .toolbar_info .lines .lines_item .lines_item_title.data-v-810f65fc {
+  text-align: center;
+  font-size: 14px;
+}
+.content .padding-xl.data-v-810f65fc {
+  overflow: hidden;
+}
+.content .item_user_plot.data-v-810f65fc {
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 40rpx;
+  margin-bottom: 20rpx;
+}
+.content .item_user_plot image.data-v-810f65fc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.content .active.data-v-810f65fc {
+  border: 2px solid #ff5f0f;
 }
 

@@ -177,7 +177,7 @@
   margin-right: 8rpx;
 }
 .content .vip_content .vip_price_option .item_price .calc_price.data-v-18458d92 {
-  font-size: 6px;
+  font-size: 10px;
   color: #aa9abc;
 }
 .content .vip_content .vip_price_option .item_price .price_tips.data-v-18458d92 {

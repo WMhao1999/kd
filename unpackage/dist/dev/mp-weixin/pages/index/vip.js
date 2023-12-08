@@ -157,7 +157,11 @@ var _default = {
     };
   },
   onLoad: function onLoad() {},
-  methods: {}
+  methods: {
+    returnHome: function returnHome() {
+      this.$emit("changeShowUrl");
+    }
+  }
 };
 exports.default = _default;
 

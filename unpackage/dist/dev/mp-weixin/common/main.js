@@ -26,6 +26,12 @@ var cuCustom = function cuCustom() {
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('cu-custom', cuCustom);
+var statusBar = function statusBar() {
+  __webpack_require__.e(/*! require.ensure | component/statusBar */ "component/statusBar").then((function () {
+    return resolve(__webpack_require__(/*! ./component/statusBar.vue */ 97));
+  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+};
+_vue.default.component('statusBar', statusBar);
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 var app = new _vue.default(_objectSpread({}, _App.default));
