@@ -19,7 +19,7 @@
 		</view>
 		<input v-model="value" type="text" class="code_input"
 			:placeholder="select_type=='charge'?'请输入充电枪编码':'请输入洗车机编码'" />
-		<view :class="value==''?'button' : 'button btn_active'">
+		<view @click="sureBtn" :class="value==''?'button' : 'button btn_active'">
 			确定
 		</view>
 	</view>
@@ -39,6 +39,23 @@
 		methods: {
 			tabSelectType(type) {
 				this.select_type = type;
+				this.value = ""
+			},
+			sureBtn() {
+				//不能为空
+				if (this.value === "") return false;
+				//类型上传
+				const type = this.select_type;
+				if (type === "charge") {
+					uni.navigateTo({
+						url: "/pages/codeDetail/charge"
+					})
+				};
+				if (type === "carWash") {
+					uni.navigateTo({
+						url: "/pages/codeDetail/carWash"
+					})
+				}
 			}
 		}
 	}

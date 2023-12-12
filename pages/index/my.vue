@@ -8,7 +8,7 @@
 			<view class="head_plot" @click="iconListShow=true">
 				<image :src="userIcon" mode=""></image>
 			</view>
-			<view class="service">
+			<view class="service" @click="jumpToService">
 				<image src="../../static/image/my/rengongkefu.svg" mode=""></image>
 			</view>
 			<view class="setting">
@@ -218,6 +218,11 @@
 			updateUserIcon() {
 				this.userIcon = this.plot_list[this.select_id].path;
 				this.iconListShow = false;
+			},
+			jumpToService() {
+				uni.navigateTo({
+					url: "/pages/service/index"
+				})
 			}
 		}
 	}
@@ -235,7 +240,7 @@
 		}
 
 		.main {
-			background-color: #fdf8f3;
+			background-color: #f8f8f8;
 			position: relative;
 			top: -30rpx;
 			border-radius: 14px 14px 0 0;
@@ -400,23 +405,25 @@
 		}
 
 		.item_user_plot {
-			width: 120rpx;
+			width: 25%;
 			height: 120rpx;
 			float: left;
-			background-color: #fff;
-			border-radius: 50%;
-			margin-right: 40rpx;
+			text-align: center;
 			margin-bottom: 20rpx;
 
 			image {
-				width: 100%;
-				height: 100%;
+				width: 120rpx;
+				height: 120rpx;
 				border-radius: 50%;
+				display: inline-block;
 			}
 		}
 
 		.active {
-			border: 2px solid #ff5f0f;
+
+			image {
+				border: 2px solid #ff5f0f;
+			}
 		}
 	}
 </style>

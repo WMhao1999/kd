@@ -5,6 +5,24 @@
 		},
 		{
 			"path": "pages/cityList/cityList"
+		},
+		{
+			"path": "pages/codeDetail/charge"
+		},
+		{
+			"path": "pages/codeDetail/carWash"
+		},
+		{
+			"path": "pages/service/index"
+		},
+		{
+			"path": "pages/service/message"
+		},
+		{
+			"path": "pages/order/order"
+		},
+		{
+			"path": "pages/carAuth/carAuth"
 		}
 	],
 	"globalStyle": {
