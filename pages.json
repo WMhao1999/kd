@@ -23,6 +23,18 @@
 		},
 		{
 			"path": "pages/carAuth/carAuth"
+		},
+		{
+			"path": "pages/order/invoice"
+		},
+		{
+			"path": "pages/recharge/recharge"
+		},
+		{
+			"path": "pages/setting/setting"
+		},
+		{
+			"path": "pages/detail/index"
 		}
 	],
 	"globalStyle": {

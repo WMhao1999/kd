@@ -29,7 +29,8 @@
 				</view>
 				<scroll-view scroll-x="true" show-scrollbar="true" class="iconMethods">
 					<view>
-						<view v-for="(item, index) in iconMethodList" :key="index" class="item">
+						<view v-for="(item, index) in iconMethodList" :key="index" class="item"
+							@click="methodsClick(item)">
 							<view :class="item.color + ' itemIcon'">
 								<view class="title">
 									{{item.name}}
@@ -70,7 +71,7 @@
 						</view>
 					</scroll-view>
 					<view class="list_main">
-						<view v-for="(item, index) in list_data" :key="index" class="item">
+						<view v-for="(item, index) in list_data" :key="index" class="item" @click="jumpToDetail">
 							<listItem :config="item"></listItem>
 						</view>
 					</view>
@@ -644,6 +645,17 @@
 			jumpCityList() {
 				uni.navigateTo({
 					url: "/pages/cityList/cityList"
+				})
+			},
+			methodsClick(data) {
+				const type = data.id;
+				if (type == 1) {
+					this.$emit("changeShowUrl")
+				};
+			},
+			jumpToDetail() {
+				uni.navigateTo({
+					url: "/pages/detail/index"
 				})
 			}
 		},

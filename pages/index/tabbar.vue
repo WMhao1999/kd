@@ -1,9 +1,9 @@
 <template>
 	<view class="content">
 		<view class="show_view">
-			<index :location="location" v-if="PageCur=='home'"></index>
+			<index @changeShowUrl="PageCur='cart'" :location="location" v-if="PageCur=='home'">
+			</index>
 			<codeNum v-if="PageCur=='similar'"></codeNum>
-			<scanQR v-if="PageCur=='sub'"></scanQR>
 			<vip @changeShowUrl="PageCur='home'" v-if="PageCur=='cart'"></vip>
 			<my v-if="PageCur=='mine'"></my>
 		</view>
@@ -27,8 +27,7 @@
 				枪编码
 			</view>
 			<!-- 中间发布按钮 -->
-			<view class="action add-action" :class="PageCur=='sub'?'activeColor':'text-gray'" data-cur="sub"
-				@click="NavChange">
+			<view class="action add-action" :class="PageCur=='sub'?'activeColor':'text-gray'" data-cur="sub">
 				<view class="cuIcon-cu-image">
 					<image v-if="PageCur=='sub'" :src="iconInfo.scanQR.active"></image>
 					<image v-if="PageCur!='sub'" :src="iconInfo.scanQR.default"></image>
@@ -58,14 +57,15 @@
 <script>
 	import index from "./index.vue"; //首页
 	import codeNum from "./code.vue"; //技术视频
-	import scanQR from "./scanQR.vue"; //宅家学
 	import vip from "./vip.vue"; //资讯
 	import my from "./my.vue"; //个人中心
+	import {
+		setStore
+	} from "@/common/utils.js"
 	export default {
 		components: {
 			index,
 			codeNum,
-			scanQR,
 			vip,
 			my
 		},
@@ -94,7 +94,7 @@
 						active: "../../static/image/tabbar/customer-businessman-fill.svg"
 					}
 				},
-				location: "上海"
+				location: "北京"
 			}
 		},
 		methods: {
@@ -103,13 +103,8 @@
 			}
 		},
 		onShow() {
-			uni.getStorage({
-				key: "City_Name",
-				success(res) {
-					console.log(res.data);
-					this.location = res.data;
-				}
-			})
+			const data = setStore("get", "City_Name")
+			this.location = data;
 		}
 	}
 </script>
@@ -117,6 +112,10 @@
 <style scoped lang="scss">
 	.activeColor {
 		color: #ff5f0f;
+	}
+
+	.content {
+		height: 100vh;
 	}
 
 	.show_view {

@@ -27,6 +27,9 @@
 .activeColor.data-v-1eab1fb4 {
   color: #ff5f0f;
 }
+.content.data-v-1eab1fb4 {
+  height: 100vh;
+}
 .show_view.data-v-1eab1fb4 {
   height: calc(100% - 100rpx);
 }

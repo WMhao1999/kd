@@ -146,32 +146,32 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var _utils = __webpack_require__(/*! @/common/utils.js */ 114);
 var index = function index() {
-  Promise.all(/*! require.ensure | pages/index/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/index/index")]).then((function () {
-    return resolve(__webpack_require__(/*! ./index.vue */ 47));
+  __webpack_require__.e(/*! require.ensure | pages/index/index */ "pages/index/index").then((function () {
+    return resolve(__webpack_require__(/*! ./index.vue */ 109));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var codeNum = function codeNum() {
   __webpack_require__.e(/*! require.ensure | pages/index/code */ "pages/index/code").then((function () {
-    return resolve(__webpack_require__(/*! ./code.vue */ 55));
+    return resolve(__webpack_require__(/*! ./code.vue */ 117));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var scanQR = function scanQR() {
   __webpack_require__.e(/*! require.ensure | pages/index/scanQR */ "pages/index/scanQR").then((function () {
-    return resolve(__webpack_require__(/*! ./scanQR.vue */ 62));
+    return resolve(__webpack_require__(/*! ./scanQR.vue */ 124));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var vip = function vip() {
   __webpack_require__.e(/*! require.ensure | pages/index/vip */ "pages/index/vip").then((function () {
-    return resolve(__webpack_require__(/*! ./vip.vue */ 67));
+    return resolve(__webpack_require__(/*! ./vip.vue */ 129));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var my = function my() {
   __webpack_require__.e(/*! require.ensure | pages/index/my */ "pages/index/my").then((function () {
-    return resolve(__webpack_require__(/*! ./my.vue */ 74));
+    return resolve(__webpack_require__(/*! ./my.vue */ 136));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
-//个人中心
 var _default = {
   components: {
     index: index,
@@ -204,13 +204,18 @@ var _default = {
           default: "../../static/image/tabbar/customer-bussinessman.svg",
           active: "../../static/image/tabbar/customer-businessman-fill.svg"
         }
-      }
+      },
+      location: "北京"
     };
   },
   methods: {
     NavChange: function NavChange(e) {
       this.PageCur = e.currentTarget.dataset.cur;
     }
+  },
+  onShow: function onShow() {
+    var data = (0, _utils.setStore)("get", "City_Name");
+    this.location = data;
   }
 };
 exports.default = _default;

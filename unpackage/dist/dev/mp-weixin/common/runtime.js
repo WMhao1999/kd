@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"component/statusBar":1,"pages/index/index":1,"pages/index/code":1,"pages/index/my":1,"pages/index/vip":1,"component/list_item":1,"component/package":1};
+/******/ 		var cssChunks = {"component/statusBar":1,"pages/index/code":1,"pages/index/index":1,"pages/index/my":1,"pages/index/vip":1,"component/list_item":1,"component/package":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"colorui/components/cu-custom":"colorui/components/cu-custom","component/statusBar":"component/statusBar","pages/index/index":"pages/index/index","pages/index/code":"pages/index/code","pages/index/my":"pages/index/my","pages/index/scanQR":"pages/index/scanQR","pages/index/vip":"pages/index/vip","component/list_item":"component/list_item","component/package":"component/package"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"colorui/components/cu-custom":"colorui/components/cu-custom","component/statusBar":"component/statusBar","pages/index/code":"pages/index/code","pages/index/index":"pages/index/index","pages/index/my":"pages/index/my","pages/index/scanQR":"pages/index/scanQR","pages/index/vip":"pages/index/vip","component/list_item":"component/list_item","component/package":"component/package"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

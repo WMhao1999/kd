@@ -11,14 +11,14 @@
 			<view class="service" @click="jumpToService">
 				<image src="../../static/image/my/rengongkefu.svg" mode=""></image>
 			</view>
-			<view class="setting">
+			<view class="setting" @click="jumpToSetting">
 				<image src="../../static/image/my/settings.svg" mode=""></image>
 			</view>
 			<view class="username">
 				微风暖阳
 			</view>
 			<view class="userinfo">
-				<view class="line item">
+				<view class="line item" @click="jumpToRecharge">
 					<view class="value">
 						<view class="small_title">
 							¥
@@ -51,7 +51,7 @@
 			</view>
 			<view class="toolbar_info">
 				<view class="lines solid-bottom">
-					<view class="lines_item">
+					<view class="lines_item" @click="jumpToOrder">
 						<view class="lines_item_icon">
 							<image src="../../static/image/my/order.svg" mode=""></image>
 						</view>
@@ -60,7 +60,7 @@
 						</view>
 					</view>
 					<view class="lines_item">
-						<view class="lines_item_icon">
+						<view class="lines_item_icon" @click="jumpToInvoice">
 							<image src="../../static/image/my/lable.svg" mode=""></image>
 						</view>
 						<view class="lines_item_title">
@@ -107,13 +107,25 @@
 				<view class="toolbar_title">
 					我的爱车
 				</view>
-				<view class="lines">
-
+				<view class="my_car" @click="jumpToAddCar">
+					<view class="left">
+						<view class="icon_main">
+							<view class="icon cuIcon-add"></view>
+						</view>
+					</view>
+					<view class="right">
+						<view class="r_title">
+							添加车辆
+						</view>
+						<view class="r_text">
+							可享停车费减免快速离场，首次认证送券包
+						</view>
+					</view>
 				</view>
 			</view>
 			<view class="toolbar_info">
 				<view class="toolbar_title">
-					我的爱车
+					更多服务
 				</view>
 				<view class="lines">
 					<view class="lines_item">
@@ -222,6 +234,31 @@
 			jumpToService() {
 				uni.navigateTo({
 					url: "/pages/service/index"
+				})
+			},
+			jumpToSetting() {
+				uni.navigateTo({
+					url: "/pages/setting/setting"
+				})
+			},
+			jumpToRecharge() {
+				uni.navigateTo({
+					url: "/pages/recharge/recharge"
+				})
+			},
+			jumpToOrder() {
+				uni.navigateTo({
+					url: "/pages/order/order"
+				})
+			},
+			jumpToInvoice() {
+				uni.navigateTo({
+					url: "/pages/order/invoice"
+				})
+			},
+			jumpToAddCar() {
+				uni.navigateTo({
+					url: "/pages/carAuth/carAuth"
 				})
 			}
 		}
@@ -363,7 +400,7 @@
 				background-color: #ffffff;
 				border-radius: 16px;
 				margin-bottom: 40rpx;
-				padding: 0 30rpx;
+				padding: 12rpx 30rpx;
 
 				.toolbar_title {
 					padding-top: 26rpx;
@@ -395,6 +432,54 @@
 							font-size: 14px;
 						}
 
+					}
+				}
+
+				.my_car {
+					height: 120rpx;
+					background-color: #f8f8fa;
+					overflow: hidden;
+					margin: 18rpx 0;
+					border-radius: 8px;
+
+					.left {
+						float: left;
+						width: 120rpx;
+						height: 120rpx;
+						position: relative;
+
+						.icon_main {
+							width: 80rpx;
+							height: 80rpx;
+							border-radius: 50%;
+							background-color: #ffe8dd;
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translateX(-50%) translateY(-50%);
+
+							.icon {
+								font-size: 30px;
+								color: #ff5f0f;
+								position: absolute;
+								left: 50%;
+								top: 50%;
+								transform: translateX(-50%) translateY(-50%);
+							}
+						}
+					}
+
+					.right {
+						padding: 16rpx 0;
+
+						.r_title {
+							font-weight: bold;
+							margin-bottom: 8rpx;
+						}
+
+						.r_text {
+							font-size: 12px;
+						}
 					}
 				}
 			}

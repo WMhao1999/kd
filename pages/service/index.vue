@@ -22,13 +22,13 @@
 							车辆认证
 						</view>
 					</view>
-					<view class="item_icon">
+					<view @click="jumpToInvoice" class="item_icon">
 						<image src="../../static/image/service/youhuiquan1.svg" mode=""></image>
 						<view class="tips">
 							开票服务
 						</view>
 					</view>
-					<view class="item_icon">
+					<view @click="jumpToRecharge" class="item_icon">
 						<image src="../../static/image/service/qianbao.svg" mode=""></image>
 						<view class="tips">
 							账户充值
@@ -150,6 +150,16 @@
 			jumpToCarAuth() {
 				uni.navigateTo({
 					url: "/pages/carAuth/carAuth"
+				})
+			},
+			jumpToInvoice() {
+				uni.navigateTo({
+					url: "/pages/order/invoice"
+				})
+			},
+			jumpToRecharge() {
+				uni.navigateTo({
+					url: "/pages/recharge/recharge"
 				})
 			}
 		}

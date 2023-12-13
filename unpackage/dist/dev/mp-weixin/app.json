@@ -1,6 +1,14 @@
 {
   "pages": [
-    "pages/index/tabbar"
+    "pages/index/tabbar",
+    "pages/cityList/cityList",
+    "pages/codeDetail/charge",
+    "pages/codeDetail/carWash",
+    "pages/service/index",
+    "pages/service/message",
+    "pages/order/order",
+    "pages/carAuth/carAuth",
+    "pages/order/invoice"
   ],
   "subPackages": [],
   "window": {
