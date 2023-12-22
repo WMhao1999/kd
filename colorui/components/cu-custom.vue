@@ -17,6 +17,10 @@
 
 <script>
 	export default {
+		props: {
+			url: String,
+			default: ''
+		},
 		data() {
 			return {
 				StatusBar: this.StatusBar,
@@ -26,8 +30,8 @@
 		name: 'cu-custom',
 		computed: {
 			style() {
-				var StatusBar= this.StatusBar;
-				var CustomBar= this.CustomBar;
+				var StatusBar = this.StatusBar;
+				var CustomBar = this.CustomBar;
 				var bgImage = this.bgImage;
 				var style = `height:${CustomBar}px;padding-top:${StatusBar}px;`;
 				if (this.bgImage) {
@@ -52,10 +56,23 @@
 		},
 		methods: {
 			BackPage() {
-				uni.navigateBack({
-					delta: 1
-				});
+				if (this.url) {
+					uni.redirectTo({
+						url: this.url
+					})
+				} else {
+					if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {
+						let url = '/' + __wxConfig.pages[0]
+						return uni.redirectTo({
+							url
+						})
+					}
+					uni.navigateBack({
+						delta: 1
+					});
+				}
 			}
+
 		}
 	}
 </script>

@@ -233,7 +233,7 @@
 				</view>
 			</template>
 		</view>
-		<view class="footer">
+		<view class="footer" v-if="activeNum==-1">
 			<view @click="" class="button">
 				保存并提交
 			</view>

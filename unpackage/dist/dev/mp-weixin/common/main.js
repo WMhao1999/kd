@@ -22,13 +22,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 var cuCustom = function cuCustom() {
   __webpack_require__.e(/*! require.ensure | colorui/components/cu-custom */ "colorui/components/cu-custom").then((function () {
-    return resolve(__webpack_require__(/*! ./colorui/components/cu-custom.vue */ 97));
+    return resolve(__webpack_require__(/*! ./colorui/components/cu-custom.vue */ 130));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('cu-custom', cuCustom);
 var statusBar = function statusBar() {
   __webpack_require__.e(/*! require.ensure | component/statusBar */ "component/statusBar").then((function () {
-    return resolve(__webpack_require__(/*! ./component/statusBar.vue */ 102));
+    return resolve(__webpack_require__(/*! ./component/statusBar.vue */ 135));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 _vue.default.component('statusBar', statusBar);

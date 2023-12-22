@@ -4,6 +4,9 @@
 			"path": "pages/index/tabbar"
 		},
 		{
+			"path": "pages/login/register"
+		},
+		{
 			"path": "pages/cityList/cityList"
 		},
 		{
