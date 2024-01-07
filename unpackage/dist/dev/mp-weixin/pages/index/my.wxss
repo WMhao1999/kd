@@ -144,7 +144,7 @@
   background-color: #ffffff;
   border-radius: 16px;
   margin-bottom: 40rpx;
-  padding: 0 30rpx;
+  padding: 12rpx 30rpx;
 }
 .content .main .toolbar_info .toolbar_title.data-v-810f65fc {
   padding-top: 26rpx;
@@ -171,6 +171,49 @@
 .content .main .toolbar_info .lines .lines_item .lines_item_title.data-v-810f65fc {
   text-align: center;
   font-size: 14px;
+}
+.content .main .toolbar_info .my_car.data-v-810f65fc {
+  height: 120rpx;
+  background-color: #f8f8fa;
+  overflow: hidden;
+  margin: 18rpx 0;
+  border-radius: 8px;
+}
+.content .main .toolbar_info .my_car .left.data-v-810f65fc {
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+}
+.content .main .toolbar_info .my_car .left .icon_main.data-v-810f65fc {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #ffe8dd;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.content .main .toolbar_info .my_car .left .icon_main .icon.data-v-810f65fc {
+  font-size: 30px;
+  color: #ff5f0f;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.content .main .toolbar_info .my_car .right.data-v-810f65fc {
+  padding: 16rpx 0;
+}
+.content .main .toolbar_info .my_car .right .r_title.data-v-810f65fc {
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+.content .main .toolbar_info .my_car .right .r_text.data-v-810f65fc {
+  font-size: 12px;
 }
 .content .padding-xl.data-v-810f65fc {
   overflow: hidden;

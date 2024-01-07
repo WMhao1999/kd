@@ -7,7 +7,7 @@
 			<vip @changeShowUrl="PageCur='home'" v-if="PageCur=='cart'"></vip>
 			<my v-if="PageCur=='mine'"></my>
 		</view>
-
+		<view class="cu-tabbar-height"></view>
 		<view class="cu-bar tabbar bg-white foot">
 			<!-- 首页 -->
 			<view class="action" :class="PageCur=='home'?'activeColor':'text-gray'" data-cur="home" @click="NavChange">
@@ -119,6 +119,6 @@
 	}
 
 	.show_view {
-		height: calc(100% - 100rpx);
+		// height: calc(100% - );
 	}
 </style>

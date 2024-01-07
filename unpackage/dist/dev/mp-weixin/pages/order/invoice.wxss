@@ -57,13 +57,28 @@
 .main .invoice_1 .footer .methods.data-v-0fd0407a {
   overflow: hidden;
   padding: 0 20rpx;
+  height: calc(100% - 64rpx);
 }
 .main .invoice_1 .footer .methods .radio.data-v-0fd0407a {
   float: left;
+  position: relative;
+  top: 30rpx;
 }
 .main .invoice_1 .footer .methods .radio .text.data-v-0fd0407a {
   display: inline-block;
   margin-left: 12rpx;
+}
+.main .invoice_1 .footer .methods .button.data-v-0fd0407a {
+  float: right;
+  width: 180rpx;
+  height: 80rpx;
+  background-color: #ff5f0f;
+  color: #ffffff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 8px;
+  position: relative;
+  top: 20rpx;
 }
 .main .invoice_2.data-v-0fd0407a {
   height: calc(100% - 94rpx);

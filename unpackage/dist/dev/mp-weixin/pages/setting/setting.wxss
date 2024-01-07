@@ -24,10 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.activeColor.data-v-1eab1fb4 {
-  color: #ff5f0f;
+.main.data-v-9543fcb0 {
+  padding: 40rpx 36rpx;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 48rpx;
 }
-.content.data-v-1eab1fb4 {
-  height: 100vh;
+.button.data-v-9543fcb0 {
+  width: 260rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #bfbfbf;
+  border-radius: 80rpx;
+  font-size: 16px;
+  color: #bfbfbf;
 }
 

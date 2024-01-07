@@ -8,7 +8,10 @@
     "pages/service/message",
     "pages/order/order",
     "pages/carAuth/carAuth",
-    "pages/order/invoice"
+    "pages/order/invoice",
+    "pages/recharge/recharge",
+    "pages/setting/setting",
+    "pages/detail/index"
   ],
   "subPackages": [],
   "window": {

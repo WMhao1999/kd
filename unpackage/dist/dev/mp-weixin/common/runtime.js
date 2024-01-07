@@ -109,7 +109,7 @@
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"colorui/components/cu-custom":"colorui/components/cu-custom","component/statusBar":"component/statusBar","pages/index/code":"pages/index/code","pages/index/index":"pages/index/index","pages/index/my":"pages/index/my","pages/index/scanQR":"pages/index/scanQR","pages/index/vip":"pages/index/vip","component/list_item":"component/list_item","component/package":"component/package"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"colorui/components/cu-custom":"colorui/components/cu-custom","component/statusBar":"component/statusBar","pages/index/code":"pages/index/code","pages/index/index":"pages/index/index","pages/index/my":"pages/index/my","pages/index/vip":"pages/index/vip","component/list_item":"component/list_item","component/package":"component/package"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

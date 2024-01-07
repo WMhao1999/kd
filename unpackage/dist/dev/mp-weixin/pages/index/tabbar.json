@@ -2,7 +2,6 @@
   "usingComponents": {
     "index": "/pages/index/index",
     "code-num": "/pages/index/code",
-    "scan-q-r": "/pages/index/scanQR",
     "vip": "/pages/index/vip",
     "my": "/pages/index/my"
   }
