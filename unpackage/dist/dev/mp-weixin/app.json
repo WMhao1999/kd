@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/tabbar",
+    "pages/login/register",
+    "pages/login/login",
     "pages/cityList/cityList",
     "pages/codeDetail/charge",
     "pages/codeDetail/carWash",
@@ -11,11 +13,17 @@
     "pages/order/invoice",
     "pages/recharge/recharge",
     "pages/setting/setting",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/detail/mapView"
   ],
   "subPackages": [],
   "window": {
     "navigationStyle": "custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取当前位置信息计算与目的地之间距离"
+    }
   },
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom",

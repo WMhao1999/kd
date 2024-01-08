@@ -2,6 +2,7 @@
 	import Vue from 'vue'
 	export default {
 		onLaunch: function() {
+			//设置状态栏
 			uni.getSystemInfo({
 				success: function(e) {
 					// #ifndef MP
@@ -22,6 +23,18 @@
 					Vue.prototype.StatusBar = e.statusBarHeight;
 					Vue.prototype.CustomBar = e.statusBarHeight + e.titleBarHeight;
 					// #endif
+				}
+			});
+			//获取用户权限
+			uni.authorize({
+				scope: 'scope.userInfo',
+				success() {
+					//获取用户定位权限
+					uni.authorize({
+						scope: 'scope.userLocation',
+						success() {}
+
+					});
 				}
 			})
 		},

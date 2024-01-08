@@ -27,7 +27,8 @@
 				枪编码
 			</view>
 			<!-- 中间发布按钮 -->
-			<view class="action add-action" :class="PageCur=='sub'?'activeColor':'text-gray'" data-cur="sub">
+			<view @click="scanQRcode" class="action add-action" :class="PageCur=='sub'?'activeColor':'text-gray'"
+				data-cur="sub">
 				<view class="cuIcon-cu-image">
 					<image v-if="PageCur=='sub'" :src="iconInfo.scanQR.active"></image>
 					<image v-if="PageCur!='sub'" :src="iconInfo.scanQR.default"></image>
@@ -100,6 +101,14 @@
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
+			},
+			scanQRcode() {
+				uni.scanCode({
+					success: function(res) {
+						console.log('条码类型：' + res.scanType);
+						console.log('条码内容：' + res.result);
+					}
+				});
 			}
 		},
 		onShow() {

@@ -53,7 +53,7 @@
 				<view class="icon cuIcon-right"></view>
 			</view>
 			<view class="cu-form-group">
-				<view class="title">
+				<view @click="goMap" class="title">
 					<view>据您2.43km，北京市海淀区彩和坊路10号</view>
 				</view>
 				<view class="icon cuIcon-location"></view>
@@ -148,6 +148,13 @@
 			return {
 				navs: ["费用", "电桩", "周边"],
 				TabCur: 0
+			}
+		},
+		methods: {
+			goMap() {
+				uni.navigateTo({
+					url: "/pages/detail/mapView"
+				})
 			}
 		}
 	}

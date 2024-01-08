@@ -7,6 +7,9 @@
 			"path": "pages/login/register"
 		},
 		{
+			"path": "pages/login/login"
+		},
+		{
 			"path": "pages/cityList/cityList"
 		},
 		{
@@ -38,6 +41,9 @@
 		},
 		{
 			"path": "pages/detail/index"
+		},
+		{
+			"path": "pages/detail/mapView"
 		}
 	],
 	"globalStyle": {

@@ -17,10 +17,6 @@
 
 <script>
 	export default {
-		props: {
-			url: String,
-			default: ''
-		},
 		data() {
 			return {
 				StatusBar: this.StatusBar,
@@ -53,10 +49,15 @@
 				type: String,
 				default: ''
 			},
+			url: {
+				type: String,
+				default: ""
+			}
 		},
 		methods: {
 			BackPage() {
 				if (this.url) {
+					console.log(this.url);
 					uni.redirectTo({
 						url: this.url
 					})
