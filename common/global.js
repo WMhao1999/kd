@@ -1,5 +1,5 @@
 //域名
-const localhost = "www.zhupeiniang.com";
+const localhost = "https://zhupeiniang.com";
 
 //状态栏高度
 const getStatusBarHeight = () => {

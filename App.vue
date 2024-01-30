@@ -1,5 +1,12 @@
 <script>
 	import Vue from 'vue'
+	import {
+		getLoginConfig
+	} from "./common/api.js";
+	import {
+		localhost
+	} from "./common/global.js"
+
 	export default {
 		onLaunch: function() {
 			//设置状态栏
@@ -25,21 +32,11 @@
 					// #endif
 				}
 			});
-			//获取用户权限
-			uni.authorize({
-				scope: 'scope.userInfo',
-				success() {
-					//获取用户定位权限
-					uni.authorize({
-						scope: 'scope.userLocation',
-						success() {}
-
-					});
-				}
-			})
 		},
-		onShow: function() {
-			console.log('App Show')
+		onShow: async function() {
+			//获取登录参数
+			const config = await getLoginConfig();
+			// console.log(config);
 		},
 		onHide: function() {
 			console.log('App Hide')

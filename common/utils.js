@@ -1,10 +1,16 @@
 //ajax请求
-export function request(method, url, data = {}) {
+export function request(req) {
+	const config = {
+		method: "GET",
+		data: {},
+		dataType: "json",
+		...req
+	};
 	return new Promise((resolve, reject) => {
 		uni.request({
-			method,
-			url,
-			data,
+			method: config.method,
+			url: config.url,
+			data: config.data,
 			header: {
 				'content-type': 'application/json',
 			},

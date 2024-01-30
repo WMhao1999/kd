@@ -151,6 +151,9 @@
 </template>
 
 <script>
+	const QQMapWX = require('@/libs/qqmap-wx-jssdk.js');
+	let qqmapsdk
+
 	import {
 		getIndexInArray
 	} from "@/common/utils.js";
@@ -673,6 +676,35 @@
 					return {}; // 默认样式或其他样式  
 				}
 			}
+		},
+		created() {
+			// 实例化API核心类
+			qqmapsdk =
+				qqmapsdk = new QQMapWX({
+					key: 'NAXBZ-RZ36H-3JSDO-WPJ7H-HWIEF-7EBE2'
+				});
+		},
+		mounted() {
+			uni.getLocation({
+				type: 'wgs84',
+				success: function(data) {
+					console.log(data.latitude);
+					console.log(data.longitude);
+					qqmapsdk.reverseGeocoder({
+						location: {
+							latitude: data.latitude,
+							longitude: data.longitude
+						},
+						coord_type: 5,
+						success: res => {
+							console.log(res);
+						},
+						fail: function(error) {
+							console.error(error);
+						},
+					});
+				}
+			});
 		}
 	}
 </script>
