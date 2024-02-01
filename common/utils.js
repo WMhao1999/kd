@@ -1,20 +1,23 @@
 //ajax请求
 export function request(req) {
+	const openid = setStore('get', 'openid') || '';
 	const config = {
-		method: "GET",
+		method: "POST",
 		data: {},
 		dataType: "json",
 		...req
 	};
+	config.data.openid = openid;
 	return new Promise((resolve, reject) => {
 		uni.request({
 			method: config.method,
 			url: config.url,
 			data: config.data,
 			header: {
-				'content-type': 'application/json',
+				'content-type': 'application/json;charset=utf-8',
 			},
 			success: (res) => {
+				console.log(res);
 				if (res.statusCode === 200) {
 					resolve(res.data);
 				} else {
@@ -22,11 +25,20 @@ export function request(req) {
 				}
 			},
 			fail: (err) => {
+				console.log(err);
 				reject(err);
 			},
 		});
 	});
-}
+};
+
+//获取腾讯地图示例
+export const getMapAPI = () => {
+	const QQMapWX = require('@/libs/qqmap-wx-jssdk.js');
+	return new QQMapWX({
+		key: 'NAXBZ-RZ36H-3JSDO-WPJ7H-HWIEF-7EBE2'
+	});
+};
 
 //获取登录服务商
 export const loginProvider = () => {
@@ -103,4 +115,30 @@ export function encryptedPhoneNumber(phoneNumber) {
 	const regex = /(\d{3})\d{4}(\d{4})/;
 	const maskedNumber = phoneNumber.replace(regex, '$1****$2');
 	return maskedNumber;
-}
+};
+
+//登录
+export const getLoginConfig = () => {
+	return new Promise(async (resovle, reject) => {
+		//获取设备信息
+		const device = uni.getDeviceInfo();
+		//请求信息
+		const config = {
+			...device
+		};
+		//获取运营商信息
+		const provider = await loginProvider();
+		config.provider = provider[0];
+		uni.login({
+			provider: provider[0],
+			success: function(res) {
+				const code = res.code;
+				config.code = code;
+				resovle(config);
+			},
+			fail: function(err) {
+				reject(err);
+			}
+		});
+	});
+};

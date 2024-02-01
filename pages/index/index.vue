@@ -151,13 +151,16 @@
 </template>
 
 <script>
-	const QQMapWX = require('@/libs/qqmap-wx-jssdk.js');
-	let qqmapsdk
-
 	import {
-		getIndexInArray
+		getIndexInArray,
+		getMapAPI
 	} from "@/common/utils.js";
+	import {
+		getChargingStationList
+	} from '@/common/api.js';
 	import listItem from "@/component/list_item.vue";
+
+	let qqmapsdk;
 
 	export default {
 		components: {
@@ -557,6 +560,21 @@
 			}
 		},
 		methods: {
+			getChargingList(data) {
+				console.log(data);
+				const result = data.result;
+				const res = getChargingStationList({
+					latitude: result.location.lat,
+					longitude: result.location.lng,
+					cityCode: result.ad_info.city_code,
+					country: result.ad_info.nation,
+					province: result.ad_info.province,
+					city: result.ad_info.city,
+					address: result.address,
+					pagesize: 100,
+					pagenumber: 1
+				});
+			},
 			cardSwiper(e) {
 				this.cardCur = e.detail.current
 			},
@@ -679,17 +697,13 @@
 		},
 		created() {
 			// 实例化API核心类
-			qqmapsdk =
-				qqmapsdk = new QQMapWX({
-					key: 'NAXBZ-RZ36H-3JSDO-WPJ7H-HWIEF-7EBE2'
-				});
+			qqmapsdk = getMapAPI();
 		},
 		mounted() {
+			const _this = this;
 			uni.getLocation({
 				type: 'wgs84',
 				success: function(data) {
-					console.log(data.latitude);
-					console.log(data.longitude);
 					qqmapsdk.reverseGeocoder({
 						location: {
 							latitude: data.latitude,
@@ -697,7 +711,7 @@
 						},
 						coord_type: 5,
 						success: res => {
-							console.log(res);
+							_this.getChargingList(res);
 						},
 						fail: function(error) {
 							console.error(error);

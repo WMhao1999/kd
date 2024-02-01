@@ -1,33 +1,34 @@
 import {
-	requset,
-	loginProvider
-} from "./utils.js";
-import {
-	tips
-} from "./alert.js";
+	request
+} from './utils.js';
 
-//登录
-export const getLoginConfig = () => {
-	return new Promise(async (resovle, reject) => {
-		//获取设备信息
-		const device = uni.getDeviceInfo();
-		//请求信息
-		const config = {
-			...device
-		};
-		//获取运营商信息
-		const provider = await loginProvider();
-		config.provider = provider[0];
-		uni.login({
-			provider: provider[0],
-			success: function(res) {
-				const code = res.code;
-				config.code = code;
-				resovle(config);
-			},
-			fail: function(err) {
-				reject(err);
-			}
+//域名
+const localhost = 'http://zhupeiniang.com';
+
+//登录请求
+export const loginRequest = (data) => {
+	return new Promise((resolve, reject) => {
+		request({
+			url: localhost + '/userinfo',
+			data: data
+		}).then(res => {
+			resolve(res);
+		}).catch(err => {
+			reject(err);
 		});
 	});
 };
+
+//获取当前位置附近充电站列表
+export const getChargingStationList = (data) => {
+	return new Promise((resolve, reject) => {
+		request({
+			url: localhost + '/getChargingStationList',
+			data: data
+		}).then(res => {
+			resolve(res);
+		}).catch(err => {
+			reject(err);
+		});
+	});
+}

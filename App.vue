@@ -1,11 +1,12 @@
 <script>
 	import Vue from 'vue'
 	import {
-		getLoginConfig
-	} from "./common/api.js";
+		getLoginConfig,
+		setStore
+	} from "./common/utils.js"
 	import {
-		localhost
-	} from "./common/global.js"
+		loginRequest
+	} from './common/api.js'
 
 	export default {
 		onLaunch: function() {
@@ -36,7 +37,12 @@
 		onShow: async function() {
 			//获取登录参数
 			const config = await getLoginConfig();
-			// console.log(config);
+			const res = await loginRequest(config);
+			if (res.openid) {
+				setStore("set", "openid", res.openid);
+			} else {
+				setStore("set", "openid", "");
+			}
 		},
 		onHide: function() {
 			console.log('App Hide')
